@@ -1,0 +1,22 @@
+{
+  "name": "DummyAuthorID/DummyPackageName",
+  "type": "library",
+  "description": "DummyPackageDescription",
+  "keywords": ["laravel","package development"],
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "DummyAuthorName",
+      "email": "DummyAuthorEmail"
+    }
+  ],
+  "autoload":{
+    "psr-4": {
+      "DummyNameSpace": "src/"
+    }
+  },
+  "config": {
+      "preferred-install": "dist"
+  }
+}
