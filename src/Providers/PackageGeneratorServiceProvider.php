@@ -1,4 +1,4 @@
-<?php namespace Srmklive\PackageGenerator;
+<?php namespace Srmklive\PackageGenerator\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Srmklive\PackageGenerator\Commands\PackageGeneratorCommand;
