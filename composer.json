@@ -1,0 +1,22 @@
+{
+  "name": "srmklive/laravel-package-generator",
+  "type": "library",
+  "description": "Laravel plugin for generating custom packages for use in Laravel applications.",
+  "keywords": ["laravel","package development"],
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Raza Mehdi",
+      "email": "srmk@outlook.com"
+    }
+  ],
+  "autoload":{
+    "psr-4": {
+      "Srmklive\\PackageGenerator\\": "src/"
+    }
+  },
+  "config": {
+      "preferred-install": "dist"
+  }
+}
