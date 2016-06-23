@@ -16,6 +16,10 @@
       "Srmklive\\PackageGenerator\\": "src/"
     }
   },
+   "require": {
+      "illuminate/support": "~5.1",
+      "illuminate/console": "~5.1"
+    },  
   "config": {
       "preferred-install": "dist"
   }
