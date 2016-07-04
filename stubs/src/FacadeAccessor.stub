@@ -1,0 +1,16 @@
+<?php namespace DummyNameSpace;
+
+use DummyNameSpace\Services\DummyClassName;
+
+class DummyClassNameFacadeAccessor
+{
+    /**
+     * Return the class object.
+     *
+     * @return DummyClassName
+     */
+    public static function getProvider()
+    {
+        return new DummyClassName;
+    }
+}
