@@ -22,5 +22,8 @@
     },  
   "config": {
       "preferred-install": "dist"
-  }
+  },
+  "bin": [
+    "makepackage"
+  ]
 }
