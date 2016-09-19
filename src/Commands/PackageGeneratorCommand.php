@@ -12,12 +12,14 @@ class PackageGeneratorCommand extends ConsoleCommand
 
     /**
      * The console command name.
+     *
      * @var string
      */
     protected $name = 'make:package';
 
     /**
      * The console command description.
+     *
      * @var string
      */
     protected $description = 'Create new custom package.';
@@ -37,7 +39,7 @@ class PackageGeneratorCommand extends ConsoleCommand
         $keywords = $this->option('keywords');
 
         // Make sure that package name must consist only underscore & dash for symbols
-        if (! preg_match('/^[A-Za-z\\-\\_]{1,}$/i', $package)) {
+        if (!preg_match('/^[A-Za-z\\-\\_]{1,}$/i', $package)) {
             throw new \Exception('Name must contain only alphabets, underscore & dash!');
         }
 
@@ -47,24 +49,24 @@ class PackageGeneratorCommand extends ConsoleCommand
         }
 
         $vendor_dir = base_path('vendor');
-        $package_dir = $vendor_dir . "/$author/$package";
-        $stubs_dir = realpath(dirname(__FILE__) . '/../../stubs');
+        $package_dir = $vendor_dir."/$author/$package";
+        $stubs_dir = realpath(dirname(__FILE__).'/../../stubs');
 
         // Create package directory
-        if (! is_dir($package_dir)) {
+        if (!is_dir($package_dir)) {
             @mkdir($package_dir, 0777, true);
             @chmod($package_dir, 0777);
         }
 
         $content = [
-            'author' => $author,
-            'package' => $package,
-            'name' => $name,
-            'email' => $email,
-            'description' => $description,
-            'class' => ucfirst($package),
-            'namespace' => $namespace,
-            'packagenamespace' => addslashes($namespace)
+            'author'           => $author,
+            'package'          => $package,
+            'name'             => $name,
+            'email'            => $email,
+            'description'      => $description,
+            'class'            => ucfirst($package),
+            'namespace'        => $namespace,
+            'packagenamespace' => addslashes($namespace),
         ];
 
         // Copy source code files
