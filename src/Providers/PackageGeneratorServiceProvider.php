@@ -1,4 +1,6 @@
-<?php namespace Srmklive\PackageGenerator\Providers;
+<?php
+
+namespace Srmklive\PackageGenerator\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Srmklive\PackageGenerator\Commands\PackageGeneratorCommand;
@@ -29,7 +31,7 @@ class PackageGeneratorServiceProvider extends ServiceProvider
     public function register()
     {
         $this->commands([
-            PackageGeneratorCommand::class
+            PackageGeneratorCommand::class,
         ]);
     }
 }
